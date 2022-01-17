@@ -9,7 +9,7 @@ field = pygame.image.load("assets/field.png") #carrega o campo
 
 score1 = 0
 score1_img = pygame.image.load("assets/score/0.png")
-score2 = 8
+score2 = 0
 score2_img = pygame.image.load("assets/score/0.png")
 
 win = pygame.image.load("assets/win.png")
@@ -61,7 +61,7 @@ def move_player(): #movimento do jogador
 ball = pygame.image.load("assets/ball.png") #carrega a bola
 ball_x = 617
 ball_y = 337
-ball_dir_x = -5
+ball_dir_x = -8
 ball_dir_y = 1
 
 def move_ball(): #cria função dos movimentos da bolinha
@@ -114,7 +114,7 @@ def move_ball(): #cria função dos movimentos da bolinha
         score1_img = pygame.image.load("assets/score/" + str(score1) + ".png")
 
 def draw(): #desenha todos os itens
-    if score1 or score2 < 10: #verifico se o placar é menor que 10
+    if score1 or score2 < 9: #verifico se o placar é menor que 10
         window.blit(field, (0, 0)) #desenha o campo
         window.blit(player1, (50, player1_y)) #desenha o player 1
         window.blit(player2, (1150, player2_y)) #desenha o player 2
